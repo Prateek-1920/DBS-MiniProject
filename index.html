@@ -71,12 +71,27 @@
 		}
 		
 		/* CONTAINER */
-		.container{
+		/* .container{
 			max-width: 80%;
-			/*background-color: rgb(198, 152, 241);*/
+			border-radius: 16px;
+
+			background-color: rgba(0, 0, 0, 0.582);
 			padding: 34px;
 			margin: auto;
+			margin-top: 30px;
+		} */
+
+		.container {
+			max-width: 60%;
+			border-radius: 16px;
+			background-color: rgba(0, 0, 0, 0.1); /* Use a semi-transparent white color */
+			padding: 34px;
+			margin: auto;
+			margin-top: 30px;
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Add a box-shadow for depth */
+			backdrop-filter: blur(12px); /* Add a backdrop-filter with blur for glass effect */
 		}
+
 		.container h1, p{
 			text-align: center;
 		}
@@ -102,7 +117,7 @@
 		}
 		.btn{
 			color:white;
-			background:rgb(216, 7, 7);
+			background:rgba(78, 78, 78, 0.444);
 			padding: 10px;
 			font-size: 16px;
 			border: 2px solid white;
@@ -112,6 +127,12 @@
 		.submitmsg{
 			font-size: 25px;
 			color: rgb(25, 102, 25);
+		}
+
+
+		.input{
+			background-color: rgba(0, 0, 0, 0.582);
+			color: white; /* Set text color to white for better contrast */
 		}
 		
 		
@@ -143,6 +164,19 @@
 			width: 100%;
 		}
 		
+		.hhhh{
+			color: rgb(255, 255, 255);
+			background-color: rgba(255, 255, 255, 0);
+			font-weight: 600;
+			font-size: 1.2em;
+			/* margin-bottom: 20px; */
+			/* border-bottom: 4px solid black; */
+			/* display: inline-block; */
+			/* letter-spacing: 1px; */
+			text-align: center;
+		}
+	
+		
 	
 	</style>
 
@@ -162,24 +196,29 @@
 	</nav>
 	<br><br><br><br>
 	
+
+
+		
+	
+	
 	<div class="page-wrapper">
 	
 		
 		<div class="container">
-			<span class="heading"> <h1>REPORT A CRIME</h1>  </span>
+			<div class="hhhh"> <h1>REPORT A CRIME</h1>  </div>
     
 			<br>
 
 			<form action="index.php" method="POST">
 			
-				<input type="text" name="name" id="name" placeholder="Enter Your Name" required>
-				<input type="email" name="email" id="email" placeholder="Enter Your Email ID" required>
-				<input type="text" name="age" id="age" placeholder="Enter Your Age" required>
-				<input type="text" name="gender" id="gender" placeholder="Enter Your Gender (M/F)" required>
-				<input type="phone" name="phone" id="phone" placeholder="Enter Your Phone Number (max. 10 characters)" required>
-				<input type="aadhaar" name="aadhaar" id="aadhaar" placeholder="Enter Your AADHAAR Enrollment Number (max. 16 characters)" required>
-				<input type="place" name="place" id="place" placeholder="Enter the Location of the Crime" required>
-				<textarea name="desc" id="desc" cols="30" rows="10" placeholder="Enter the details of the crime, i.e., how did the attack take place, the details of the victims, any information about the criminals, and the details of the eyewitnesses, if present at the location. " required></textarea>
+				<input type="text" name="name" id="name" placeholder="Enter Your Name" class="input" required>
+				<input type="email" name="email" id="email" placeholder="Enter Your Email ID" class="input" required>
+				<input type="text" name="age" id="age" placeholder="Enter Your Age" class="input" required>
+				<input type="text" name="gender" id="gender" placeholder="Enter Your Gender (M/F)" class="input" required>
+				<input type="phone" name="phone" id="phone" placeholder="Enter Your Phone Number (max. 10 characters)" class="input" required>
+				<input type="aadhaar" name="aadhaar" id="aadhaar" placeholder="Enter Your AADHAAR Enrollment Number (max. 16 characters)" class="input" required>
+				<input type="place" name="place" id="place" placeholder="Enter the Location of the Crime" class="input" required>
+				<textarea name="desc" id="desc" cols="30" rows="10" placeholder="Enter the details of the crime, i.e., how did the attack take place, the details of the victims, any information about the criminals, and the details of the eyewitnesses, if present at the location. " class="input" required></textarea>
 				<button class="btn">Submit </button>
 				<!-- <button class="btn">Reset </button>  -->
 			</form>
